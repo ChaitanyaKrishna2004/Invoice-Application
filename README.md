@@ -1,6 +1,6 @@
-### Invoice-Application
+# Invoice-Application
 
-## General Settings
+# General Settings
 
 - year stat -> date month
 - year end -> date month
@@ -9,7 +9,7 @@
   (1 | Hssting Plan for 1 year | 2500 | Web Hosting Space for 1 year).
   (1 | Web Design | | Designing the web).
 
-## Settings -> Business Tab
+# Settings -> Business Tab
 
 - Logo [file path] preview
 - Business Name
@@ -22,9 +22,9 @@
   Abn Number
 - Website Link
 
-## Settings -> Quotation
+# Settings -> Quotation
 
-# Quote Seting
+## Quote Seting
 
 - Prefix
   Used to identify document type, year, or company.
@@ -41,7 +41,7 @@
 - Terms & Conditions
 - Footer -> can write in html
 
-# Accepting Quotes
+## Accepting Quotes
 
 - Accept Quote Button
   check box "Accept Quote"
@@ -52,12 +52,12 @@
 - Decline Reason Required
 - Decliend Quote Message
 
-# Admin Notices
+## Admin Notices
 
 - Show me notice when Select/Deselect All
   Quote Viewed
   Quote Accepted
 
-# Template Design
+## Template Design
 
 - Template pdf
