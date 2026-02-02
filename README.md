@@ -1,6 +1,10 @@
 # Invoice-Application
 
-# General Settings
+1. Company Rules (Settings)
+2. Daily Business Work (Transactions)
+3. Output (PDF / Email)
+
+# 1 General Settings
 
 - year stat -> date month
 - year end -> date month
@@ -9,7 +13,7 @@
   (1 | Hssting Plan for 1 year | 2500 | Web Hosting Space for 1 year).
   (1 | Web Design | | Designing the web).
 
-# Settings -> Business Tab
+# 2 Settings -> Business Tab
 
 - Logo [file path] preview
 - Business Name
@@ -22,7 +26,7 @@
   Abn Number
 - Website Link
 
-# Settings -> Quotation
+# 3 Settings -> Quotation
 
 ## Quote Seting
 
@@ -61,3 +65,54 @@
 ## Template Design
 
 - Template pdf
+
+# 4 Invoices
+
+- Prefix
+- Suffix
+- Auto Increment
+- Next Number
+- Due Date
+- Hide Adjust Field
+- Terms & Conditons
+- Footer
+
+## Admin Notice
+
+- show me notices when
+  Invoice Viewed
+  Invoice Paid
+
+## Template Design
+
+- Template
+
+# 5 Mail
+
+-Eamil Invoice/Quotation Template
+
+# 6 Payments
+
+- Currency Symbol
+- Currency Position
+- Thousand Separator
+- Decimal Separator
+- Number of Decimals
+- Payment Page
+- Payment Page Footer
+
+# Payment Methods
+
+- Bank
+- Generic Payment
+- Payment GateWay - Paypal
+
+# 7 Seting Tax
+
+- Price enter with tax
+  Yes/No
+- Tax Percentage
+- Tax Name
+
+# 8 Seting -> Email
+
