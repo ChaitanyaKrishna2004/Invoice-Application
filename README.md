@@ -50,9 +50,12 @@
 - Accept Quote Button
   check box "Accept Quote"
 - Accepted Quote Action
-  Drop Box
+  Drop Box -> Convert Quote and send to client
 - Accept Quote Text
 - Accepted Quote Message
+
+## Decline Quotes
+
 - Decline Reason Required
 - Decliend Quote Message
 
@@ -116,3 +119,174 @@
 
 # 8 Seting -> Email
 
+- Email Address
+- Email Name
+- Bcc on Client Emails
+
+## Quote Available
+
+- Subject
+- Content
+- Button text
+- Footer Text
+
+## Inovice Available
+
+- Subject
+- Content
+- Button text
+- Footer Text
+
+## Payment Receviced
+
+- Subject
+- Content
+- Footer Text
+
+## Payment Reminder
+
+- When to send
+- Subject
+- Content
+- Footer Text
+
+# 9 Translate
+
+- Quote Label
+- Quote Label PluraL
+- Invoice Label
+- Invoice Label Plural
+- Hrs/Qty
+- Service
+- Rate/Price
+- Adjust
+- Sub Total
+- Discount
+- Total
+- Total Due
+
+# 10 PDF
+
+- Can download after seting all the Invoice or Quotation
+
+---
+
+# 11 Add New Client
+
+## Create New Use
+
+- Add new client form -> Existing User/ Create New User
+- Business/Client Name -> not null
+- E-mail -> not null
+- Username -> not null
+- Password -> not null
+- Address
+- Extra Info
+- First Name
+- Last Name
+- Website link
+
+## Existing User
+
+- Select Existing User -> drop box not null
+- Business / Client Name -> Not Null
+- Adress
+- Extra Info
+
+# 12 Add New Invoice
+
+- Invoice Title
+- Description
+
+## Line Items
+
+- Qty
+- Item Title
+- Adjust (%)
+- Rate($)
+- Amount($)
+- Description
+- Add a pre-defined lite item(which we are setting)
+- Add Another Item
+
+## Payment
+
+- Date
+- Amount
+- Payment Method
+- Payment Id
+- Status
+- Memo(description)
+
+## Terms & Conditions
+
+- Saved in setting
+
+## Invoice Details
+
+- Client -> drop down
+- Status
+- Invoice Number
+- Order Number
+- Create Date
+- Due Date
+
+## Payment Settings
+
+- Currency
+- Currency Symbol
+- Payment Methods
+
+## Tax Settings
+
+- Prices entered with tax
+- Tax Rate(%)
+
+# 13 Add New Quote
+
+- Quote Title
+- Description
+
+## Line Items
+
+- Qty
+- Item Title
+- Adjust (%)
+- Rate($)
+- Amount($)
+- Description
+- Add a pre-defined lite item(which we are setting)
+- Add Another Item
+
+## Payment
+
+- Date
+- Amount
+- Payment Method
+- Payment Id
+- Status
+- Memo(description)
+
+## Terms & Conditions
+
+- Saved in setting
+
+## Invoice Details
+
+- Client -> drop down
+- Status
+- Invoice Number
+- Order Number
+- Create Date
+- Due Date
+
+## Payment Settings
+
+- Currency
+- Currency Symbol
+- Payment Methods
+
+## Tax Settings
+
+- Prices entered with tax
+- Tax Rate(%)
