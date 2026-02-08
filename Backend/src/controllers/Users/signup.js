@@ -29,13 +29,23 @@ const signup = async (req, res) => {
     });
 
     if (isUsernameunique) {
-      return res.status(400).send("user name already exist");
+      return res.status(400).send("user name is already exist");
     }
 
     const isEmailvalid = validator.isEmail(email);
 
     if (!isEmailvalid) {
       throw new Error("Email is Invalid");
+    }
+
+    isEmailunique = await User.findOne({
+      where: {
+        email,
+      },
+    });
+
+    if (isEmailvalid) {
+      return res.status(400).send("email is already exist");
     }
 
     const isPasswordStrong = validator.isStrongPassword(password);
