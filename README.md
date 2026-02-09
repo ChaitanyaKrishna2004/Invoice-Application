@@ -92,7 +92,7 @@
 
 # 5 Mail
 
--Eamil Invoice/Quotation Template
+- Eamil Invoice/Quotation Template
 
 # 6 Payments
 
@@ -104,7 +104,7 @@
 - Payment Page
 - Payment Page Footer
 
-# Payment Methods
+## Payment Methods
 
 - Bank
 - Generic Payment

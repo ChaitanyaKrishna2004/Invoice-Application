@@ -46,7 +46,7 @@ const login = async (req, res) => {
       return res.status(400).send("Invalid login detail's");
     }
 
-    const token = jwt.sign(user.user_id, process.env.privateKey);
+    const token = jwt.sign(user.dataValues.user_id, process.env.privateKey);
 
     res
       .status(200)
