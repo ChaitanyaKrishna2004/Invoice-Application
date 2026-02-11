@@ -4,22 +4,32 @@
 
 const General = require("../../models/Setting/general.js");
 
-const general = (req, res) => {
+const general = async (req, res) => {
   try {
     const { start, end } = req.body;
-    console.log(start);
-    console.log(end);
-    const user_id = req.user_id;
+    const user = req.user;
+    console.log(user);
+
+    // Validate that start and end are provided
+    if (!start || !end) {
+      return res.status(400).send("start and end dates are required");
+    }
 
     const [start_month, start_year] = start.split(" ").map(Number);
     const [end_month, end_year] = end.split(" ").map(Number);
 
-    const startdate = new Date(start_year, start_month);
-    const enddate = new Date(end_year, end_month);
-    console.log(`${startdate} ${enddate}`);
+    const startdate = new Date(start_year, start_month - 1, 1);
+    const enddate = new Date(end_year, end_month - 1, 1);
 
-    res.status(200).send("hellooooooo");
-    // const creategeneral = General.create({});
+    console.log(user);
+
+    const newgeneral = await General.create({
+      start_year: startdate,
+      end_year: enddate,
+      createdby: user.user_id,
+    });
+
+    res.status(200).send(newgeneral);
   } catch (error) {
     console.log(error);
     res.status(400).send(error.message);

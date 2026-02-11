@@ -64,6 +64,10 @@ const User = sequelize.define(
           args: [["Admin", "Staff", "Client"]],
           msg: "Role must be Admin, Staff, or Client",
         },
+        references: {
+          model: "users",
+          key: "user_id",
+        },
       },
     },
   },

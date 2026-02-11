@@ -1,7 +1,8 @@
 const app = require("./src/app.js");
+require("./src/models/association.js");
 const sequelize = require("./src/config/database.js");
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 (async () => {
   try {

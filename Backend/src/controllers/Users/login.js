@@ -46,11 +46,18 @@ const login = async (req, res) => {
       return res.status(400).send("Invalid login detail's");
     }
 
-    const token = jwt.sign(user.dataValues.user_id, process.env.privateKey);
+    const token = jwt.sign(
+      { user_id: user.dataValues.user_id },
+      process.env.privateKey,
+      { expiresIn: "5m" },
+    );
 
     res
       .status(200)
-      .cookie("token", token, { expiresIn: Date.now() + 5 * 1000 })
+      .cookie("token", token, {
+        httpOnly: true,
+        expires: new Date(Date.now() + 5*60*1000),
+      })
       .send("Login Sucessfull !!!");
   } catch (error) {
     res.status(400).send(error.message);
