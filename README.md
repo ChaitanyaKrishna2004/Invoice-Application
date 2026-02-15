@@ -1,8 +1,8 @@
 # Invoice-Application
 
-1. Company Rules (Settings)
-2. Daily Business Work (Transactions)
-3. Output (PDF / Email)
+1. Company Rules (Settings).
+2. Daily Business Work (Transactions).
+3. Output (PDF / Email).
 
 # 1 General Settings
 
