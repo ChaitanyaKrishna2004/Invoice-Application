@@ -2,7 +2,7 @@
 // admin can able to see and edit created general setting
 // general setting has only one row for the present year
 
-const General = require("../../models/Setting/general.js");
+const General = require("../../../models/Setting/general.js");
 
 const general = async (req, res) => {
   try {

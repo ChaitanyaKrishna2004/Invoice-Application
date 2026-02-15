@@ -49,14 +49,14 @@ const login = async (req, res) => {
     const token = jwt.sign(
       { user_id: user.dataValues.user_id },
       process.env.privateKey,
-      { expiresIn: "5m" },
+      { expiresIn: "60m" },
     );
 
     res
       .status(200)
       .cookie("token", token, {
         httpOnly: true,
-        expires: new Date(Date.now() + 5*60*1000),
+        expires: new Date(Date.now() + 5 * 60 * 1000),
       })
       .send("Login Sucessfull !!!");
   } catch (error) {

@@ -1,6 +1,5 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../../config/database");
-const { FaS } = require("react-icons/fa6");
 
 const General = sequelize.define(
   "General",
@@ -31,6 +30,8 @@ const General = sequelize.define(
     createdby: {
       type: DataTypes.UUID,
       allowNull: false,
+      onDelete: "CASCADE",
+      onUpdate: "CASCADE",
       validate: {
         notNull: {
           msg: "Please enter createdby",
@@ -39,6 +40,10 @@ const General = sequelize.define(
           args: 4,
           msg: "Invalid created by",
         },
+      },
+      references: {
+        model: "User",
+        key: "user_id",
       },
     },
   },
