@@ -21,7 +21,7 @@
 - Extra Business Info
   Business Number
   Phone Number
-  Email Address
+  Email Address 
   Vat Number
   Abn Number
 - Website Link
