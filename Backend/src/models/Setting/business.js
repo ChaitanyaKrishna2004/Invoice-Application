@@ -19,7 +19,7 @@ const Business = sequelize.define(
             }
         },
         logo_file_name:{
-            type: DataTypes.STRING(200),
+            type: DataTypes.STRING(),
         },
         logo_file_store_name:{
             type: DataTypes.STRING(),
@@ -28,8 +28,15 @@ const Business = sequelize.define(
             type: DataTypes.STRING(),
             allowNull: false,
         },
+        Address:{
+            type: DataTypes.TEXT,
+        },
+        Extra_Business_Info:{
+            type: DataTypes.TEXT,
+        },
         website:{
             type: DataTypes.STRING(),
-        }
+        },
+
     }
 )
