@@ -6,7 +6,10 @@ const app = express();
 const userRouter = require("../src/routes/userRouter.js");
 const generalRoture = require("../src/routes/Setting/generalRouting.js");
 
-app.use(cors());
+app.use(cors({
+    origin: "http://localhost:5173",
+    credentials: true
+}));
 app.use(express.json({ type: ["application/json", "text/plain"] }));
 app.use(express.urlencoded({ extended: true }));
 

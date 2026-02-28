@@ -1,18 +1,31 @@
 import React, { useState } from 'react'
+import { Base_URL } from '../utils/constans';
+import axios from 'axios';
+import { useNavigate } from "react-router";
 
 const Login = () => {
-    const [Login, setLogin] = useState("");
-    const [Password, setPassword] = useState("");
+    const [Login, setLogin] = useState("cckkaa1236@gmail.com");
+    const [Password, setPassword] = useState("Chaitanya@#1234");
+    const [msg, setmsg] = useState("");
 
-    const handlelogin = () => {
-        const res = axios({
-            method: 'post',
-            url: '',
-            data: {
-                Login,
-                Password
-            }
-        })
+    const navigate = useNavigate();
+    const handlelogin = async () => {
+        try {
+            const res = await axios({
+                method: 'post',
+                url: Base_URL + '/auth/login',
+                data: {
+                    login: Login,
+                    password: Password
+                }
+            })
+            setmsg(res?.response?.data)
+            console.log(res.data);
+            navigate("/");
+        }
+        catch (error) {
+            console.log(error);
+        }
     };
 
     return (
@@ -29,10 +42,11 @@ const Login = () => {
                         <input type="text" value={Password} onChange={(e) => setPassword(e.target.value)} placeholder="" className="input input-neutral" />
                     </fieldset>
                     <div className="card-actions justify-center">
-                        <button className="btn btn-primary m-2">Login</button>
+                        <button className="btn btn-primary m-2" onClick={handlelogin}>Login</button>
                     </div>
                 </div>
             </div>
+            <tost msg={msg} />
         </div>
     )
 }
